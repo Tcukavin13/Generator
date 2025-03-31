@@ -1,0 +1,53 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "Unix Debug",
+            "displayName": "Unix Debug",
+            "description": "Unix Makefiles generator",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        },
+        {
+            "name": "MinGW Debug",
+            "displayName": "MinGW Debug",
+            "description": "MinGW Makefiles generator",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        },
+        {
+            "name": "Unix Release",
+            "displayName": "Unix Release",
+            "description": "Unix Makefiles generator",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/Release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        },
+        {
+            "name": "MinGW Release",
+            "displayName": "MinGW Release",
+            "description": "MinGW Makefiles generator",
+            "generator": "MinGW Makefiles",
+            "binaryDir": "${sourceDir}/Release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+            }
+        }
+    ]
+}

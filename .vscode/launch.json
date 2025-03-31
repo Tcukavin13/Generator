@@ -1,0 +1,76 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "executable": "./Debug/at32f437_pwm.elf",
+            "svdFile": "./SVD/AT32F437xx_v2.svd",
+            "liveWatch": {"enabled": true, "samplesPerSecond": 10},
+            "runToEntryPoint": "main",
+            //"rtos": "FreeRTOS",
+            //"swoConfig": {
+            //    "enabled": true,
+            //    "cpuFrequency": 288000000,
+            //    "swoFrequency": 256000,
+            //    "source": "probe",
+            //    "decoders": [
+            //        {
+            //            "port": 0,
+            //            "type": "console",
+            //            "label": "SWO output",
+            //            "encoding": "ascii"
+            //        },
+            //    //    {
+            //    //        "type": "graph",
+            //    //        "graphId": "2",
+            //    //        "encoding": "signed",
+            //    //        "scale": 1.5,
+            //    //        "port": 1
+            //    //    },
+            //    //    {
+            //    //        "type": "graph",
+            //    //        "graphId": "3",
+            //    //        "encoding": "signed",
+            //    //        "scale": 1.5,
+            //    //        "port": 2
+            //    //    }
+            //    ]
+            //},
+            //"graphConfig": [
+            //    {
+            //        "label": "Debug data",
+            //        "timespan": 5,
+            //        "type": "realtime",
+            //        "annotate": false,
+            //        "maximum": 256,
+            //        "minimum": -256,
+            //        "plots": [
+            //            {
+            //                "graphId": "1", 
+            //                "label": "Sin",
+            //                "color": "#53753c"
+            //            },
+            //            {
+            //                "graphId": "2", 
+            //                "label": "Cos",
+            //                "color": "#ff8c69"
+            //            },
+            //            {
+            //                "graphId": "3", 
+            //                "label": "Line",
+            //                "color": "#e6e6fa"
+            //            }
+            //        ]
+            //    },
+            //],
+            "configFiles": [
+                "./OpenOCD/atlink.cfg",
+                "./OpenOCD/at32f437xM.cfg"
+            ],
+        }
+    ]
+}
